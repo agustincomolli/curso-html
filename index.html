@@ -1,27 +1,116 @@
-<!-- 
-  "<h1>" ➡️ Es la etiqueta HTML 
-  "<h1>Porfolio de Agustín Comolli</h1>" ➡️ Es el elemento HTML  
-  "<h1>" significa Heading 1 y se utiliza para títulos.
--->
-<h1>Porfolio de Agustín Comolli</h1>
-<!-- "<p>" ➡️ Es la etiqueta de párrafos (paragraph) -->
-<p>
-  +20 años de experiencia como <strong>Soporte técnico en TI</strong>. Estudiante de programación en Python, HTML, CSS
-  y JS.
-</p>
-<h2>Experiencia</h2>
-<!-- Unorderer List -->
-<ul>
-  <!-- List Items -->
-  <li>Camuzzo Gas Pampeana - 1995</li>
-  <li>Veterinaria Beloqui - 1996</li>
-  <li>Freelance - 2000 ➡️ 2009</li>
-  <li>Municipalidad de Cañuelas 2009 ➡️ ...</li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Codificación, con esto se verán tildes, caracteres especiales y emojis -->
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- El ancho del contenido sea el ancho de la pantalla -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título de la pestaña del navegador -->
+  <title>Porfolio de Agustín Comolli</title>
+  <!-- Importante para buscadores -->
+  <meta name="robots" content="index, follow">
+  <!-- Dar estilo a la barra de títulos del navegador con un color. -->
+  <meta name="theme-color" content="#09f">
+  <!-- Favicon -->
+  <link rel="icon" href="./images/agustin-comolli.png" type="image/png">
+  <!-- La descripción de nuestro contenido se muestra en los resultados de una búsqueda. -->
+  <meta name="description" content="Portfolio de Agustín Comolli, 20 de experiencia como soporte en TI">
+  <!-- Open Graph es para compartir en las redes sociales. -->
+  <meta property="og:title" content="Agustín Comolli 👨‍💻">
+  <meta property="og:description" content="Portfolio de Agustín Comolli, 20 de experiencia como soporte en TI">
+  <meta property="og:image" content="./images/agustin-comolli.png">
+</head>
 
-<!-- 
-  "src" Es un atributo (source) de una etiqueta HTML
-  "alt" Es un texto alternativo que sirve para describir la foto en caso de que esta no pueda cargarse en el navegador.
- -->
-<img src="./images/agustin-comolli.png" alt="El logotipo de Agustín Comolli" title="Logotipo de Agustín" width="150"
-  height="150">
+<body>
+  <header>
+    <!-- 
+        "<h1>" ➡️ Es la etiqueta HTML 
+        "<h1>Porfolio de Agustín Comolli</h1>" ➡️ Es el elemento HTML  
+        "<h1>" significa Heading 1 y se utiliza para títulos.
+      -->
+    <h1>Porfolio de Agustín Comolli 👨‍💻</h1>
+
+    <nav>
+      <!-- Enlaces internos -->
+      <a href="#experience">Experiencia</a>
+      <a href="#projects">Proyectos</a>
+      <!-- Enlaces externos -->
+      <!-- target="_blank" Abre una pestaña nueva -->
+      <!-- rel="noreferrer" SEGURIDAD: No envía información a la página externa -->
+      <a href="https://github.com/agustincomolli" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- "<p>" ➡️ Es la etiqueta de párrafos (paragraph) -->
+    <p>
+      +20 años de experiencia como <strong>Soporte técnico en TI</strong>. Estudiante de programación en Python, HTML,
+      CSS
+      y JS.
+    </p>
+    <h2 id="experience">Experiencia</h2>
+    <!-- Unorderer List -->
+    <ul>
+      <!-- List Items -->
+      <li class="list-item">Camuzzo Gas Pampeana - 1995</li>
+      <li class="list-item">Veterinaria Beloqui - 1996</li>
+      <li class="list-item">Freelance - 2000 ➡️ 2009</li>
+      <li class="list-item">Municipalidad de Cañuelas 2009 ➡️ ...</li>
+    </ul>
+
+    <!-- 
+        "src" Es un atributo (source) de una etiqueta HTML
+        "alt" Es un texto alternativo que sirve para describir la foto en caso de que esta no pueda cargarse en el navegador.
+        "id" Identificador único del elemento HTML, solo puede haber un solo elemento con un único "id"
+       -->
+    <img id="photo-image" src="./images/agustin-comolli.png" alt="El logotipo de Agustín Comolli"
+      title="Logotipo de Agustín" width="150" height="150">
+
+    <h2 id="projects">Proyectos realizados</h2>
+    <aside>
+      <header>
+        <h3>Mis tecnologías favoritas</h3>
+      </header>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </aside>
+    <section>
+      <article>
+        <header>
+          <h4>Sitio Web Corporativo</h4>
+          <p>Desarrollo de un sitio web coporativo para una empresa de TI.</p>
+          <footer>
+            <small>Tecnologías utilizadas: HTML, CSS, JS, Python y MySQL</small>
+          </footer>
+        </header>
+      </article>
+      <article>
+        <header>
+          <h4>Juego Multiusuario</h4>
+          <p>Desarrollo un juego online multiusuario basado en el piedra, papel o tijera</p>
+          <footer>
+            <small>Tecnologías utilizadas: HTML, CSS, JS y Node.js</small>
+          </footer>
+        </header>
+      </article>
+      <article>
+        <header>
+          <h4>Juego multiplataforma</h4>
+          <p>Desarrollo de un clon del juego Space Invaders.</p>
+          <footer>
+            <small>Tecnologías utilizadas: Python</small>
+          </footer>
+        </header>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2023 - Hecho por Agustín Comolli
+  </footer>
+</body>
+</html>
