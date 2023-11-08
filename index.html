@@ -1,5 +1,7 @@
+<!-- Indica al navegador que este documento es HTML5 -->
 <!DOCTYPE html>
 <html>
+<!-- La cabecera del documento, no se muestra en el cuerpo de la página -->
 <head>
   <!-- Codificación, con esto se verán tildes, caracteres especiales y emojis -->
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -22,6 +24,7 @@
 </head>
 
 <body>
+  <!-- La cabecera de la página, generalmente contiene navegación y títulos -->
   <header>
     <!-- 
         "<h1>" ➡️ Es la etiqueta HTML 
@@ -30,6 +33,7 @@
       -->
     <h1>Porfolio de Agustín Comolli 👨‍💻</h1>
 
+    <!-- "nav" representa una sección de una página que enlaza a otras páginas o partes de la página -->
     <nav>
       <!-- Enlaces internos -->
       <a href="#experience">Experiencia</a>
@@ -41,6 +45,7 @@
     </nav>
   </header>
 
+  <!-- "main" representa el contenido principal del cuerpo del documento -->
   <main>
     <!-- "<p>" ➡️ Es la etiqueta de párrafos (paragraph) -->
     <p>
@@ -49,10 +54,11 @@
       y JS.
     </p>
     <h2 id="experience">Experiencia</h2>
-    <!-- Unorderer List -->
+    <!-- "ul" representa una lista desordenada -->
     <ul>
-      <!-- List Items -->
-      <li class="list-item">Camuzzo Gas Pampeana - 1995</li>
+      <!-- "li" representa un elemento de una lista -->
+      <!-- "class" es un atributo que define una o varias clases de elemento para ser referenciado por CSS o JavaScript -->
+      <li class="list-item">Camuzzi Gas Pampeana - 1995</li>
       <li class="list-item">Veterinaria Beloqui - 1996</li>
       <li class="list-item">Freelance - 2000 ➡️ 2009</li>
       <li class="list-item">Municipalidad de Cañuelas 2009 ➡️ ...</li>
@@ -67,7 +73,11 @@
       title="Logotipo de Agustín" width="150" height="150">
 
     <h2 id="projects">Proyectos realizados</h2>
+
+    <!-- "aside" representa una sección de una página que consiste en contenido tangencialmente relacionado con el contenido 
+          alrededor del "aside" -->
     <aside>
+      <!-- "header" dentro de "aside" o "article" representa un grupo de ayudas introductorias o navegacionales -->
       <header>
         <h3>Mis tecnologías favoritas</h3>
       </header>
@@ -78,7 +88,12 @@
         <li>Python</li>
       </ul>
     </aside>
+
+    <!-- Sección del documento. Contiene contenido relacionado que se agrupa en un solo segmento de contenido
+         coherente. -->
     <section>
+      <!-- Los artículos representan un componente independiente del contenido del documento, como un blog 
+           individual o un widget de usuario. -->
       <article>
         <header>
           <h4>Sitio Web Corporativo</h4>
@@ -107,10 +122,90 @@
         </header>
       </article>
     </section>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <!-- "details" se utiliza para crear un widget que el usuario puede abrir y cerrar. "open" es un atributo booleano 
+            que indica si los detalles estarán abiertos por defecto. -->
+      <details open>
+        <!-- "summary" proporciona un encabezado para el widget "details", que es lo que se muestra antes de que se abra. -->
+        <summary>¿Qué estudios tienes?</summary>
+        <p>Estudié la carrera de Analista de Sistemas en el Instituto Terciario Santa María de Cañuelas</p>
+      </details>
+      <details>
+        <summary>¿Cuáles son tus hobbies?</summary>
+        <p>Leer, salir a caminar, ver películas</p>
+      </details>
+      <details>
+        <summary>¿Cuál es tu lenguaje favorito?</summary>
+        <p>Me encanta Python porque es un lenguaje fácil de aprender y es muy versátil, con él puedes hacer de todo.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Formulario de contacto</h2>
+      <!-- "form" define un formulario HTML para la entrada del usuario. 
+          "action" especifica dónde enviar los datos del formulario cuando se envía.
+          "method" especifica cómo enviar los datos del formulario (en este caso, se usa POST). -->
+      <form action="/" method="post">
+        <!-- "fieldset" se utiliza para agrupar elementos relacionados en un formulario. -->
+        <fieldset>
+          <!-- "legend" define un título para el "fieldset". -->
+          <legend>Información personal</legend>
+          <!-- "div" se usa aquí para agrupar elementos, en este caso, una etiqueta y una entrada. -->
+          <div class="">
+            <!-- "label" representa una etiqueta para un elemento de entrada de formulario específico. 
+                "for" se asocia con el ID de un elemento de formulario para vincular la etiqueta. -->
+            <label for="name">Nombre:</label>
+            <!-- "input" representa un campo de entrada de datos.
+                "type" especifica el tipo de entrada, en este caso, texto.
+                "name" es el nombre del campo de entrada y se usa para referenciar los datos del formulario.
+                "id" debe ser único y se utiliza para identificar el elemento.
+                "placeholder" proporciona una pista sobre qué se espera en el campo.
+                "required" hace que el campo sea obligatorio para enviar el formulario. -->
+            <input type="text" name="name" id="name" placeholder="Escribe tu nombre aquí" required>
+          </div>
+          <div class="">
+            <label for="email">Email:</label>
+            <!-- Campo de entrada para correo electrónico con validación incorporada para el formato de correo electrónico. -->
+            <input type="email" name="email" id="email" placeholder="usuario@dominio.com" required>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Información adicional</legend>
+          <label for="phone">Teléfono:</label>
+          <!-- Campo de entrada para teléfono.
+              "pattern" se utiliza para definir un patrón de validación para el número de teléfono. -->
+          <input type="tel" name="phone" id="phone" placeholder="222612345678" required pattern="^\+54\d{10,11}$">
+        </fieldset>
+        <fieldset>
+          <legend>Otros</legend>
+          <label for="why">¿Por qué quieres contactar?</label>
+          <!-- "select" define un menú desplegable.
+               "name" es el nombre del campo y "id" es el identificador único del elemento. -->
+          <select name="why" id="wht">
+            <option value="1">Trabajo</option>
+            <option value="2">Duda</option>
+            <option value="3">Más información</option>
+          </select>
+          <div class="">
+            <label for="terms">¿Aceptas los términos y condiciones?</label>
+            <!-- "input" tipo "checkbox" permite a los usuarios seleccionar una o más opciones.
+                "required" indica que aceptar los términos es necesario para enviar el formulario. -->
+            <input type="checkbox" name="terms" id="terms" required>
+          </div>
+        </fieldset>
+        <!-- "button" con "type" "submit" se utiliza para enviar el formulario. -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
   </main>
 
+  <!-- "footer" representa el pie de página de un documento o sección -->
   <footer>
     &copy; 2023 - Hecho por Agustín Comolli
+    <a href="mailto:agustincomolli@gmail.com">Envíame un correo 📧</a>
+    <a href="https://wa.me/5402226680056?text=Hola Agustín">Envíame un WhatsApp ✍️</a>
   </footer>
 </body>
 </html>
