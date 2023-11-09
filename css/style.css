@@ -1,0 +1,6 @@
+h1 {
+  /* Forma moderna de usar rgb() */
+  color: rgb(0 0 0 / 50%);
+  border-width: 3px;
+  border-style: solid;
+}
