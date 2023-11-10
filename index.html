@@ -16,7 +16,7 @@
   <!-- Favicon -->
   <link rel="icon" href="./images/agustin-comolli.png" type="image/png">
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <!-- La descripción de nuestro contenido se muestra en los resultados de una búsqueda. -->
   <meta name="description" content="Portfolio de Agustín Comolli, 20 de experiencia como soporte en TI">
   <!-- Open Graph es para compartir en las redes sociales. -->
@@ -38,23 +38,39 @@
     <!-- "nav" representa una sección de una página que enlaza a otras páginas o partes de la página -->
     <nav>
       <!-- Enlaces internos -->
-      <a href="#experience">Experiencia</a>
-      <a href="#projects">Proyectos</a>
+      <a class="link" href="#experience">Experiencia</a>
+      <a class="link" href="#projects">Proyectos</a>
       <!-- Enlaces externos -->
       <!-- target="_blank" Abre una pestaña nueva -->
       <!-- rel="noreferrer" SEGURIDAD: No envía información a la página externa -->
-      <a href="https://github.com/agustincomolli" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="link" href="https://github.com/agustincomolli" target="_blank" rel="noreferrer">GitHub</a>
     </nav>
   </header>
+
+  <!-- 
+    El elemento 'dialog' sirve para crear un cuadrado de diálogo o modal que se puede usar para confirmaciones 
+    de usuario, cuadros de alerta, etc. 
+    
+    El atributo open hace que el diálogo aparezca para el usuario. Si no se incluye este atributo, el cuadro de 
+    diálogo permanecerá oculto hasta que se active con JavaScript.
+  -->   
+  <dialog id="custom-alert">
+    <h2>¿Sabías que puedes crear una cuadro de díalogo así?</h2>
+    <p>🥳 ¡Y es totalmente nativo! 🕺</p>
+    <button id="close-custom-alert">Cerrar</button>
+  </dialog>
 
   <!-- "main" representa el contenido principal del cuerpo del documento -->
   <main>
     <!-- "<p>" ➡️ Es la etiqueta de párrafos (paragraph) -->
-    <p>
+    <p class="description">
       +20 años de experiencia como <strong>Soporte técnico en TI</strong>. Estudiante de programación en Python, HTML,
       CSS
       y JS.
     </p>
+
+    <button id="open-custom-alert">Más información</button>
+
     <h2 id="experience">Experiencia</h2>
     <!-- "ul" representa una lista desordenada -->
     <ul>
@@ -209,5 +225,7 @@
     <a href="mailto:agustincomolli@gmail.com">Envíame un correo 📧</a>
     <a href="https://wa.me/5402226680056?text=Hola Agustín">Envíame un WhatsApp ✍️</a>
   </footer>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>
